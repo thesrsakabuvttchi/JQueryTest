@@ -2,7 +2,6 @@ $(document).ready(main);
 
 function main()
 {
-    $('button').click(PClick)
     $.ajax({url : 'http://worldtimeapi.org/api/timezone/Asia/Kolkata',
     
         success: function(result)
@@ -10,7 +9,8 @@ function main()
             result = new Date(result['unixtime']);
             result = String(result.getHours())+':'+String(result.getMinutes())
             console.log(result)
-            $('#AjaxTime').text("Time by AJAX: "+result)
+            $('#AjaxTime').text("Time by AJAX:"+result)
+            $('#AjaxProgress').hide()
         },
 
         error : function(xhr,status,error)
@@ -18,9 +18,4 @@ function main()
             console.log("ERROR:",error,status)
         }
     });
-}
-
-function PClick()
-{
-    $('#EmpForm').toggle(1000)
 }
