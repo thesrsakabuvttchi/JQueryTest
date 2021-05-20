@@ -81,6 +81,3 @@ def ChangeData():
         return(render_template('result.html',state='Sucess!'))
     except Exception as ex:
         return(str(ex))
-
-
-app.run(debug=True)
