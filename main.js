@@ -18,7 +18,7 @@ function CheckEid()
         return
     requestData = {Eid : $('#Employee_id').val()}
     params = $.param(requestData)
-    $.get('http://127.0.0.1:5000/api/EmpData?'+params).done(
+    $.get('https://vast-springs-43279.herokuapp.com/api/EmpData?'+params).done(
         function(data)
         {
             data = JSON.parse(data)
@@ -63,7 +63,7 @@ function UpdateValues(event)
         Eded : $('#Employee_deductions').val()
     }
     params = $.param(reqData)
-    location.href = ('http://127.0.0.1:5000/api/ChangeData?'+params);
+    location.href = ('https://vast-springs-43279.herokuapp.com/api/ChangeData?'+params);
 }
 
 function resetvals(event)
