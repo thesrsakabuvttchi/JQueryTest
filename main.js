@@ -22,6 +22,7 @@ function CheckEid()
         function(data)
         {
             data = JSON.parse(data)
+            console.log(data)
             if(data.Eid == null)
             {
                 $('#save').attr('disabled',false)
