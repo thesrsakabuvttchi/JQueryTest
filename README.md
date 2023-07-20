@@ -1,2 +1,2 @@
 # JQueryTest
-[!EmployeeSignup.png]
+![EmployeeSignup](EmployeeSignup.png)
